@@ -1,0 +1,235 @@
+:root{
+  --primary: #ff6dc1;
+  --bg: #fff
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+body {
+  font-family: 'poppins', Sans-Serif;
+  background-color: var(--bg);
+  color: black;
+  min-height: 5000vh;
+}
+
+
+
+
+/* kepala start*/
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: #497b008f;
+  border-bottom: 1px solid #fff;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 99999;
+}
+.navbar .navbar-logo {
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--bg);
+  font-style: italic;
+  text-shadow: 1px 1px 3px #00000076;
+}
+.navbar .navbar-logo span {
+  color: var(--primary);
+}
+.navbar .navbar-nav a {
+  color: white;
+  display: inline-block;
+  font-size: 1.3rem;
+  margin: 0 1rem;
+  
+}
+.navbar .navbar-nav a:hover {
+  color: var(--primary);
+}
+.navbar .navbar-nav a::after {
+  content: ' ';
+  display: block;
+  padding-bottom: 0.1rem;
+  border-bottom: 0.1rem solid white;
+  transform: scaleX(0);
+  transition: 0.3s linear;
+}
+.navbar .navbar-nav a:hover::after{
+  transform: scaleX(0.7);
+}
+.navbar .navbar-ex a{
+  color: white;
+  margin: 0 0.5rem;
+}
+.navbar .navbar-ex a:hover {
+  color: var(--primary);
+}
+#lapis-menu {
+  display: none;
+}
+/* kepala end*/
+
+/* hero image start*/
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url('/img/hero.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}.hero::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  bottom: 0;
+  background: linear-gradient(0deg,white 8%, #ff6dc100 30%);
+}
+.hero .konten {
+  padding: 1.4rem 7%;
+  max-width: 60rem;
+}
+.hero .konten h1 {
+  font-size: 5rem;
+  color: white;
+  text-shadow: 1px 1px 3px #00000076;
+  line-height: 1.2;
+}
+.hero .konten h1 span {
+  color: var(--primary);
+}
+
+.hero .konten p {
+  color: white;
+  font-size: 1.4rem;
+  margin-top: 1rem;
+  text-shadow: 1px 1px 3px #00000076;
+  }
+.hero .konten p span {
+  color: var(--primary);
+}
+.hero .konten .cta {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.3rem;
+  color: white;
+  background-color: #ff6dc1;
+  border-radius: 1rem;
+  box-shadow: 1px 1px 3px #00000076;
+}
+/* hero image end*/
+
+
+/* tentang start*/
+.aboute, .menu {
+  padding: 8rem 7% 1.4rem;
+}
+.aboute h2, .menu h2{
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 3rem;
+}
+.aboute h2 span, .menu h2 span{
+  color: var(--primary);
+  
+}
+.aboute .row {
+  display: flex;
+  
+}
+.aboute .row .tentang-gambar {
+  flex: 1 1 45rem;
+}
+.aboute .row .tentang-gambar img {
+  border-radius: 1rem;
+  width: 100%;
+}
+.aboute .row .kata {
+  flex: 1 1 35rem;
+  padding: 0 1rem;
+}
+.aboute .row .kata h3 {
+  font-size: 1.8rem;
+  margin-top: -0.5rem;
+}
+.aboute .row .kata p {
+  font-weight: 300;
+}
+
+/* tentang end*/
+
+/* menu start*/
+.menu .menu-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+
+/* menu end*/
+
+
+
+/*media media */
+
+/* laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+/* tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 62%;
+  }
+  #lapis-menu {
+  display: inline-block;
+  }
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #000000a7;
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
+  }
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+  .navbar .navbar-nav a {
+    color: white;
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.2);
+  }
+}
+
+
+
+/* hp */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}
